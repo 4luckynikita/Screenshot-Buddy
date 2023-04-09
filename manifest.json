@@ -1,0 +1,43 @@
+/*{
+    "manifest_version": 2,
+    "name": "APIHelper",
+    "description": "Assistant for GPTAPI Program",
+    "version": "1.0",
+    "icons": {
+        "16": "",
+        "48": "",
+        "128": ""
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "",
+            "48":"",
+            "128":""
+        }
+    },
+    "content_scripts": [{}]
+}*/
+{
+  "manifest_version": 2,
+  "name": "Screenshot Buddy",
+  "version": "1.0",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "background",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "main.js" ]
+    }
+  ],
+  "web_accessible_resources": [
+    "content.js"
+  ]
+}
